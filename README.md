@@ -2,16 +2,14 @@
 
 - Редактируем конфиг OpenSSH демона
 
-```
-bash
+```bash
 
 vi /etc/ssh/sshd_config 
 ```
 
 - Добавить это в конец файла
 
-```
-bash
+```bash
 
 UseDNS no
 Match group chroot
@@ -21,24 +19,21 @@ Match group chroot
 
 - Перестартовываем демон
 
-```
-bash
+```bash
 
 service ssh restart
 ```
 
 - Копируем скрипт
 
-```
-bash
+```bash
 
 wget -c https://raw.githubusercontent.com/dtulyakov/chrot/master/mkchroot.sh
 ```
 
 - Создаём юзверя например vpupkin с ID 2000
 
-```
-bash
+```bash
 
 mkchroot.sh vpupkin 2000
 ```
